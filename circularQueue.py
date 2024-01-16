@@ -7,15 +7,15 @@ size = 0
 
 def enQueue(item): # add to the back of the queue
     global size, rear, queue
-    size += 1
-    if size > 5: # as we are working with an array, it cannot go beyond a fixed length
+    if size == 5: # as we are working with an array, it cannot go beyond a fixed length
         print("\nERR: Queue full.")
     else:
+        size += 1
         rear = (rear + 1)%5
         queue[rear] = item
 
 def deQueue(): # remove from the front of the queue
-    global size, front, queue
+    global size, front
     size -= 1
     front = (front + 1)%5
 
