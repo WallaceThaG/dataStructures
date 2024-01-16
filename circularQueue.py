@@ -10,23 +10,25 @@ def enQueue(item): # add to the back of the queue
         print("\nERR: Queue full.")
     else:
         size += 1
-        rear = (rear + 1)%5
+        rear = (rear + 1)%5 # using MOD allows the queue to be circular
         queue[rear] = item
 
-def deQueue(): # remove from the front of the queue (whilst not actually removing any array elements in memory
+def deQueue(): # remove from the front of the queue (whilst not actually removing any array elements in memory)
     global size, front
-    size -= 1
-    front = (front + 1)%5
+    if size == 0: # we can't remove from a queue with no elements
+        print("\nERR: Queue empty.")
+    else:
+        size -= 1
+        front = (front + 1)%5
 
 while loop:
     choice = input("\nAdd [1]\nRemove [2]\nQuit [3]\n\nENTER: ") # the user can either remove or add from the queue
     if choice == '1':
-        item = int(input("\nENTER: "))
+        item = int(input("\nENTER NUMBER: "))
         enQueue(item)
         print(queue)
     elif choice == '2':
         deQueue()
-        print(size)
         print(queue)
     else:
         loop = False
