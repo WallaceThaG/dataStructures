@@ -21,14 +21,18 @@ def deQueue(): # remove from the front of the queue (whilst not actually removin
         size -= 1
         front = (front + 1)%5
 
-while loop:
-    choice = input("\nAdd [1]\nRemove [2]\nQuit [3]\n\nENTER: ") # the user can either remove or add from the queue
-    if choice == '1':
-        item = int(input("\nENTER NUMBER: "))
-        enQueue(item)
-        print(queue)
-    elif choice == '2':
-        deQueue()
-        print(queue)
-    else:
-        loop = False
+def main():
+
+    while loop:
+        choice = input("\nAdd [1]\nRemove [2]\nQuit [3]\n\nENTER: ") # the user can either remove or add from the queue
+        if choice == '1':
+            item = int(input("\nENTER NUMBER: "))
+            enQueue(item)
+            print(queue)
+        elif choice == '2':
+            deQueue()
+            print(queue)
+        else:
+            loop = False
+
+main()
