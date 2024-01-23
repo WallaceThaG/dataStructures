@@ -6,6 +6,7 @@ that the user is able to add and remove from.
 class Circular_Queue():
    
     def __init__(self):
+
         self.front = 0
         self.rear = -1
         self.size = 0
@@ -13,3 +14,5 @@ class Circular_Queue():
     def enQueue(self, theItem):
         if size == 5:
             print("ERR: Queue full.")
+        else:
+            
