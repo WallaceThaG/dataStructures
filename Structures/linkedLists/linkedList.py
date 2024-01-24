@@ -1,7 +1,7 @@
 from typing import Any
 
 
-class Node():
+class Node(): # a node has data and a pointer to the next node
     
     def __init__(self, theData):
         self.data = theData
@@ -40,6 +40,5 @@ people = LinkedList()
 people.add("Dipsy")
 people.add("Po")
 people.add("Laa-Laa")
+people.traverse()
 print(people) # returns a memory address
-print(people.head.next) # returns none because there is only one element in the linked list
-1
