@@ -50,8 +50,7 @@ class LinkedList():
                 current = current.getNext
             temp = current.getNext()
             current.setNext(temp.getNext())'''
-    # commented out method needs work
-
+    ###### commented out method needs work!! PROBLEM ON LINE 52
 people = LinkedList()
 people.add("Dipsy")
 people.add("Po")
