@@ -7,26 +7,28 @@ linkedList = [
     [None,None]
 ]
 
-head = 0
+head = 0 # head pointer points to the first item in the linked list
 
 def traverse():
     
-    current = head
+    current = head # set current pointer to the head pointer
 
-    while current != None:
+    while current != None: # iterates until the end of the linked list (indicated by a null value)
         print(linkedList[current][0])
-        current = linkedList[current][1]
+        current = linkedList[current][1] # update current pointer
 
 def addItem(item):
 
     current = head
+    empty = getEmpty()
 
     while current != None:
         if linkedList[current][1] == None:
-            empty = getEmpty()
+            print(empty)
             linkedList[empty][0] = item
+            print(linkedList[empty][0], linkedList[empty][1])
             linkedList[current][1] = empty
-            current = linkedList[current][1]
+        current = linkedList[current][1]
         
 def getEmpty():
 
